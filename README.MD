@@ -105,3 +105,5 @@ You can tailor the recommendations further by modifying the information in your 
 - **Release Years**: Use specific release years to fine-tune recommendations to your favorite eras.
 
 ---
+
+YOU CAN IMPORT YOUR TRAKT.TV JSON LISTS, USE TRACT BACKUP https://darekkay.com/blog/trakt-tv-backup/
