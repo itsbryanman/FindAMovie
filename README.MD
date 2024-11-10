@@ -1,6 +1,4 @@
 
-Here’s a polished version of your README for FindAMovie.py, designed for clarity and readability:
-
 🎬 Movie Recommendations from Watched List
 This project analyzes a JSON file of your watched movies and generates personalized movie recommendations. By identifying patterns in your viewing preferences—such as genres, average ratings, and release years—the program uses The Movie Database (TMDb) API to suggest 5 new movies you might enjoy.
 
