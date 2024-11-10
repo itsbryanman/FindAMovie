@@ -2,7 +2,7 @@ import json
 import requests
 
 # Replace with your TMDb API key
-TMDB_API_KEY = "1db1e7057b49dd2e81d9e188bd2edb54"
+TMDB_API_KEY = "********************"
 
 # Load watched movies from JSON file
 def load_watched_movies(filename):
