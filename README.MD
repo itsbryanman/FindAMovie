@@ -1,6 +1,6 @@
 # 🎬 Movie Recommendations from Watched List
 
-This project analyzes a JSON file of your watched movies and generates personalized movie recommendations. By identifying patterns in your viewing preferences—such as genres, average ratings, and release years—the program uses The Movie Database (TMDb) API to suggest 5 new movies you might enjoy.
+This project analyzes a JSON file of your watched movies and generates personalized movie recommendations. It automatically retrieves genre information from TMDb and selects films similar to your viewing habits. The script outputs five suggestions based on genre frequency, average ratings and release periods.
 
 ---
 
@@ -15,67 +15,48 @@ This project analyzes a JSON file of your watched movies and generates personali
 
 ## 📋 Requirements
 
-- **Python 3.x**
-- **Requests Library**: Install it via `pip install requests`
-- **TMDb API Key**: Sign up at [The Movie Database](https://www.themoviedb.org/) to get your free API key.
+- **Python 3.8+**
+- **TMDb API Key**: sign up at [The Movie Database](https://www.themoviedb.org/) for a free key.
 
 ---
 
 ## ⚙️ Setup Instructions
 
-### Step 1: Clone the Repository
+1. **Clone the repository**
 
-```bash
-git clone https://github.com/yourusername/movie-recommendations.git
-```
+   ```bash
+   git clone https://github.com/yourusername/movie-recommendations.git
+   cd movie-recommendations
+   ```
 
-### Step 2: Install Dependencies
+2. **Create a virtual environment and install dependencies**
 
-Use the following command to install the `requests` library for making API calls to TMDb:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   ```
 
-```bash
-pip install requests
-```
+3. **Set your TMDb API key**
 
-### Step 3: File Setup
+   Obtain an API key from TMDb and set it in your environment:
 
-1. **Download `FindAMovie.py`**: Save the script in a folder on your computer.
-2. **Create Your JSON File**: Place a JSON file named `watched_movies.json` in the same directory as `FindAMovie.py`. Use this format for each movie you've watched:
+   ```bash
+   export TMDB_API_KEY="<your api key>"
+   ```
 
-    ```json
-    [
-        {
-            "title": "Inception",
-            "genres": ["Action", "Science Fiction"],
-            "rating": 8.8,
-            "release_year": 2010
-        },
-        {
-            "title": "The Dark Knight",
-            "genres": ["Action", "Drama"],
-            "rating": 9.0,
-            "release_year": 2008
-        }
-        // Add more movies here
-    ]
-    ```
+4. **Prepare your watch list**
 
-3. **Update the API Key**:  
-   - Open `FindAMovie.py` in a text editor.
-   - Replace `YOUR_TMDB_API_KEY` with your TMDb API key on the line:
-
-     ```python
-     TMDB_API_KEY = "YOUR_TMDB_API_KEY"
-     ```
+   Create a JSON file named `watched_movies.json` in the project directory. Each entry should contain a title, a list of genres, a numeric rating and the release year.
 
 ---
 
 ## ▶️ Running the Script
 
-Navigate to the directory where `FindAMovie.py` and `watched_movies.json` are located and execute the following command:
+Execute the program with the path to your watch list:
 
 ```bash
-python FindAMovie.py
+python FindAMovie.py watched_movies.json
 ```
 
 ---
